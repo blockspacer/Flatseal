@@ -3,11 +3,14 @@ const {GLib} = imports.gi;
 const {setup, update, has, hasOnly} = imports.utils;
 setup();
 
+const {setupMocks} = imports.mocks;
+setupMocks();
+
 const {FlatpakApplicationsModel} = imports.models.applications;
 const {FlatpakInfoModel} = imports.models.info;
 const {FlatpakPermissionsModel, DELAY} = imports.models.permissions;
 
-const _totalPermissions = 30;
+const _totalPermissions = 36;
 
 const _basicAppId = 'com.test.Basic';
 const _oldAppId = 'com.test.Old';
